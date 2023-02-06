@@ -1,0 +1,65 @@
+* {
+  font-family: arial;
+  color:rgb(156, 199, 185);
+  margin: 5;
+  padding: 0;
+  border: 5;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(34, 31, 31);
+}
+h1 {
+  color: rgb(96, 168, 197);
+}
+p {
+  color: rgb(125, 230, 202);
+}
+
+header {
+  min-height: 150px;
+  text-align: center;
+  background-color: rgb(44, 42, 56);
+  font-size: large;
+
+}
+
+main {
+  min-height: 500px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+footer {
+  min-height: 150px;
+  text-align: center;
+}
+aside:nth-child(1) {
+  flex: 0 0 10%;
+}
+aside:nth-child(3) {
+  flex: 0 0 10%;
+}
+article {
+  flex: 1 0 auto;
+  max-width: 80%;
+  background-color: rgb(58, 51, 51);
+  border: 50px;
+  border-color: blue;
+  padding: 2%;
+}
+.container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+}
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90%;
+  height: 90%;
+  margin: 5%;
+}
