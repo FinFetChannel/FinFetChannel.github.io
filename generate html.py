@@ -81,6 +81,20 @@ with tag('html'):
                 with tag('iframe', src="https://itch.io/embed/1326223?dark=true", width="552", height="167"):
                     pass
                 doc.stag('br'); doc.stag('hr'); doc.stag('br')
+                with tag('h2'):
+                    text("The LockPickin'joyer")
+                with tag('p'):
+                    text('''A game inspired by the LockPickingLawyer, made in Python with PyGame and PygBag.''')
+                with tag('div', klass='gamecontainer'):
+                    with tag('iframe', src="https://itch.io/embed-upload/6464625", klass='game'):pass
+                doc.stag('br'); doc.stag('hr'); doc.stag('br')
+                with tag('h2'):
+                    text("Super MaRayO Caster")
+                with tag('p'):
+                    text('''A first-person perspective version of Super Mario Bros. using raycasting, made in Python with PyGame and PygBag.''')
+                with tag('div', klass='gamecontainer'):
+                    with tag('iframe', src="https://itch.io/embed-upload/7339954", klass='game'):pass
+                doc.stag('br'); doc.stag('hr'); doc.stag('br')
             with tag('aside'):
                 pass
 
