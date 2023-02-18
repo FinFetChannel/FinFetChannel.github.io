@@ -2,6 +2,7 @@
 <html>
   <head>
     <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
   </head>
   <body>
     <header>
@@ -12,18 +13,48 @@
       <aside></aside>
       <article>
         <h2>Simple Raycasting with Matplotlib</h2>
-        <p>Here is a video of one of my first projects in Python, a simple raycasting game with matplotlib:</p>
+        <p>One of my first projects in Python, a simple raycasting game with matplotlib, drawing walls as
+                         vertical lines on a grid system.</p>
         <div class="container">
           <iframe src="https://www.youtube.com/embed/5xyeWBxmqzc" class="video"></iframe>
         </div>
+        <br />
+        <hr />
+        <br />
         <h2>Pytracing Maze - my first game release</h2>
-        <p>A simple 3D maze game, where you have to find the exit to pass to the next level, but beware of enemies.  The final objective is to obtain the highest score, you lose points when you die and the difficulty increases with the score.</p>
+        <p>A simple 3D maze game, where you have to find the exit to pass to the next level, 
+                    but beware of enemies.  The final objective is to obtain the highest score, you 
+                    lose points when you die and the difficulty increases with the score.</p>
+        <div class="container">
+          <iframe src="https://www.youtube.com/embed/GNfGmNccGjE" class="video"></iframe>
+        </div>
+        <p>This game uses a simple implementation of raytracing, where several rays are cast
+                      for each pixel, this allows for real time shadows and reflections. Geometry is based on 
+                      math, with cubes and spheres on a grid system.</p>
         <iframe src="https://itch.io/embed/1126594?dark=true" width="552" height="167"></iframe>
+        <p>The game was made in Python with Pygame, for better performance the drawing is accelerated 
+                    with Numba, leading to 20 times gain in fps.</p>
+        <br />
+        <hr />
+        <br />
+        <h2>Dead And!</h2>
+        <p>A raycasting game made in Python, now with textures and sprites.</p>
+        <div class="container">
+          <iframe src="https://www.youtube.com/embed/FLc6vUwyTdM" class="video"></iframe>
+        </div>
+        <p>Themes developed include:<ul><li>Floorcasting</li><li>Raycasting with textures and fake shadows</li><li>Sprites</li><li>Enemies AI</li><li>Sounds</li><li>GUI and menus</li><li>Level design</li><li>FPS mod</li></ul></p>
+        <iframe src="https://itch.io/embed/1326223?dark=true" width="552" height="167"></iframe>
+        <br />
+        <hr />
+        <br />
       </article>
       <aside></aside>
     </main>
     <footer>
-      <p>This is the footer?</p>
+      <a href="https://finfetchannel.itch.io/" class="fab fa-itch-io fa-3x"></a>
+      <a href="https://www.youtube.com/@FinFET" class="fab fa-youtube fa-3x"></a>
+      <a href="https://github.com/FinFetChannel" class="fab fa-github fa-3x"></a>
+      <a href="https://discord.com/invite/ZQmnZc4ARa" class="fab fa-discord fa-3x"></a>
     </footer>
   </body>
 </html>
