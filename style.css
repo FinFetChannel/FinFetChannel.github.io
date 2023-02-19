@@ -79,7 +79,7 @@ article {
 
 
 /* Style all font awesome icons */
-.fab {
+.fab, .fa{
   padding: 20px;
   font-size: 30px;
   width: 50px;
@@ -88,6 +88,6 @@ article {
 }
 
 /* Add a hover effect if you want */
-.fab:hover {
+.fab:hover, .fa:hover {
   opacity: 0.7;
 }
