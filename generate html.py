@@ -12,9 +12,10 @@ def main():
 
         with tag('body'):
             with tag('header'):
-                with tag('h1'):
-                    finfet_logo(tag, text)
-                    text(' channel')
+                doc.stag('img', src='finfet.png')
+                # with tag('h1'):
+                #     finfet_logo(tag, text)
+                #     text(' channel')
                 with tag('p'):
                     finfet_logo(tag, text)
                     text(' is a ')
