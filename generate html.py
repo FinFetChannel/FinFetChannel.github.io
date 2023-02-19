@@ -68,8 +68,7 @@ with tag('html'):
                 with tag('p'):
                     text('''A raycasting game made in Python, now with textures and sprites.''')
                 with tag('div', klass='videocontainer'):
-                    with tag('iframe', src="https://www.youtube.com/embed/FLc6vUwyTdM", klass='video'):
-                        pass
+                    with tag('iframe', src="https://www.youtube.com/embed/FLc6vUwyTdM", klass='video'):pass
                 with tag('p'):
                     text('''Themes developed include:''')
                     with tag('ul'):
@@ -91,8 +90,11 @@ with tag('html'):
                     text("The LockPickin'joyer")
                 with tag('p'):
                     text('''A game inspired by the LockPickingLawyer, made in Python with PyGame and PygBag.''')
+                with tag('div', klass='videocontainer'):
+                    with tag('iframe', src="https://www.youtube.com/embed/p-QJxbZmP3c", klass='video'):pass
+                doc.stag('br')
                 with tag('a', href="https://itch.io/embed-upload/6464625", target="LockPickingLawyer"):
-                    text('Click Here to load the game')
+                    text('Click here to load the game')
                 with tag('div', klass='gamecontainer'):
                     with tag('iframe', src="about:blank", name="LockPickingLawyer", klass='video'):pass
                 doc.stag('br'); doc.stag('hr'); doc.stag('br')
@@ -101,19 +103,22 @@ with tag('html'):
                     text("Super MaRayO Caster")
                 with tag('p'):
                     text('''A first-person perspective version of Super Mario Bros. using raycasting, made in Python with PyGame and PygBag.''')
+                with tag('div', klass='videocontainer'):
+                    with tag('iframe', src="https://www.youtube.com/embed/NXhRi8UgzZk", klass='video'):pass
+                doc.stag('br')
                 with tag('a', href="https://itch.io/embed-upload/7339954", target="SuperMarayo"):
-                    text('Click Here to load the game')
+                    text('Click here to load the game')
                 with tag('div', klass='gamecontainer'):
                     with tag('iframe', src='about:blank', name="SuperMarayo", klass='video'):pass
                 doc.stag('br'); doc.stag('hr'); doc.stag('br')
-            with tag('aside'):
-                pass
+            with tag('aside'): pass
 
         with tag('footer'):
-            with tag('a', href="https://finfetchannel.itch.io/", klass="fab fa-itch-io fa-3x"):pass
-            with tag('a', href="https://www.youtube.com/@FinFET", klass="fab fa-youtube fa-3x"):pass
-            with tag('a', href="https://github.com/FinFetChannel", klass="fab fa-github fa-3x"):pass
-            with tag('a', href="https://discord.com/invite/ZQmnZc4ARa", klass="fab fa-discord fa-3x"):pass
+            with tag('a', href="https://www.reddit.com/r/FinFET/", klass="fab fa-reddit fa-2x"):pass
+            with tag('a', href="https://finfetchannel.itch.io/", klass="fab fa-itch-io fa-2x"):pass
+            with tag('a', href="https://www.youtube.com/@FinFET", klass="fab fa-youtube fa-2x"):pass
+            with tag('a', href="https://github.com/FinFetChannel", klass="fab fa-github fa-2x"):pass
+            with tag('a', href="https://discord.com/invite/ZQmnZc4ARa", klass="fab fa-discord fa-2x"):pass
         
 with open("index.html", "w") as f:
     f.writelines(indent(doc.getvalue()))
