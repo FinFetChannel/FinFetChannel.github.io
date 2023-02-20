@@ -7,18 +7,20 @@ def main():
 
     with tag('html'):
         with tag('head'):
-            doc.stag('link', rel='stylesheet', href='/style.css')
+            doc.stag('link', rel='stylesheet', href='style.css')
             doc.stag('link', rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css')
 
         with tag('body'):
             with tag('header'):
-                doc.stag('img', src='finfet.png', klass='header_logo')
+                # doc.stag('img', src='finfet.png', klass='header_logo')
+                with tag('a', href='https://www.youtube.com/@FinFET', target="_blank"):
+                    doc.stag('img', src='finfet.png', height=200)
                 with tag('p'):
-                    finfet_logo(tag, text)
-                    text(' is a ')
-                    with tag('a', href='https://www.youtube.com/@FinFET'):
-                        text('channel on YouTube') 
-                    text(' where I try stuff out with programming (especially Python) and tech in general.')
+                    # finfet_logo(tag, text)
+                    # text(' is a ')
+                    # with tag('a', href='https://www.youtube.com/@FinFET', target="_blank"):
+                    #     text('channel on YouTube') 
+                    text('A channel on YouTube where I try stuff out with programming (especially Python) and tech in general.')
                 social_media(tag)
             with tag('main'):
                 with tag('aside'):pass
@@ -32,6 +34,7 @@ def main():
                     video_frame(tag, 'NXhRi8UgzZk')
                     doc.stag('br')
                     game_frame(tag, text, '7339954')
+                    doc.stag('br')
                     itch_frame(tag, '1789891')
                     end_post(doc)
 
@@ -42,6 +45,7 @@ def main():
                     video_frame(tag, 'p-QJxbZmP3c')
                     doc.stag('br')
                     game_frame(tag, text, '6464625')
+                    doc.stag('br')
                     itch_frame(tag, '1474850')
                     end_post(doc)
 
@@ -101,28 +105,33 @@ def finfet_logo(tag, text):
 
 def video_frame(tag, video):
     with tag('div', klass='videocontainer'):
-        with tag('iframe', src='https://www.youtube.com/embed/'+video, klass='video'):pass
+        with tag('iframe', src='https://www.youtube.com/embed/'+video, klass='video', allowfullscreen=''):pass
 
 def itch_frame(tag, game):
     with tag('div', klass='itchcontainer'):
         with tag('iframe', src="https://itch.io/embed/"+game+"?dark=true", klass='video'):pass
 
 def game_frame(tag, text, game):
-    with tag('a', href="https://itch.io/embed-upload/"+game, target=game):
-        text('Click here to load the game')
-    with tag('div', klass='gamecontainer'):
-        with tag('iframe', src='about:blank', name=game, klass='video'):pass
+    with tag('details'):
+        with tag('summary'):
+            text('Click HERE to reveal the game iframe and ')
+            with tag('a', href="https://itch.io/embed-upload/"+game, target=game):
+                text('HERE to actually load the game')
+        with tag('div', klass='gamecontainer'):
+            with tag('iframe', src='about:blank', name=game, klass='video', allowfullscreen=''):pass
+
+    
 
 def end_post(doc):
     doc.stag('br'); doc.stag('hr'); doc.stag('br')
 
 def social_media(tag):
-    with tag('a', href="https://www.reddit.com/r/FinFET/", klass="fab fa-reddit fa-2x"):pass
-    with tag('a', href="https://finfetchannel.itch.io/", klass="fab fa-itch-io fa-2x"):pass
-    with tag('a', href="https://www.youtube.com/@FinFET", klass="fab fa-youtube fa-2x"):pass
-    with tag('a', href="https://github.com/FinFetChannel", klass="fab fa-github fa-2x"):pass
-    with tag('a', href="mailto:finfetchannel@outlook.com", klass="fa fa-envelope fa-2x"):pass
-    with tag('a', href="https://discord.com/invite/ZQmnZc4ARa", klass="fab fa-discord fa-2x"):pass
+    with tag('a', href="https://www.reddit.com/r/FinFET/", target="_blank", klass="fab fa-reddit fa-2x"):pass
+    with tag('a', href="https://finfetchannel.itch.io/", target="_blank", klass="fab fa-itch-io fa-2x"):pass
+    with tag('a', href="https://www.youtube.com/@FinFET", target="_blank", klass="fab fa-youtube fa-2x"):pass
+    with tag('a', href="https://github.com/FinFetChannel", target="_blank", klass="fab fa-github fa-2x"):pass
+    with tag('a', href="mailto:finfetchannel@outlook.com", target="_blank", klass="fa fa-envelope fa-2x"):pass
+    with tag('a', href="https://discord.com/invite/ZQmnZc4ARa", target="_blank", klass="fab fa-discord fa-2x"):pass
     
 if __name__ == '__main__':
     main()

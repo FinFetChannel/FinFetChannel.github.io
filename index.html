@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
   </head>
   <body>
     <header>
-      <img src="finfet.png" class="header_logo" />
-      <p><span style="color: rgb(7, 97, 193)">Fin</span><span style="color: rgb(227, 52, 52)">FET</span> is a <a href="https://www.youtube.com/@FinFET">channel on YouTube</a> where I try stuff out with programming (especially Python) and tech in general.</p>
-      <a href="https://www.reddit.com/r/FinFET/" class="fab fa-reddit fa-2x"></a>
-      <a href="https://finfetchannel.itch.io/" class="fab fa-itch-io fa-2x"></a>
-      <a href="https://www.youtube.com/@FinFET" class="fab fa-youtube fa-2x"></a>
-      <a href="https://github.com/FinFetChannel" class="fab fa-github fa-2x"></a>
-      <a href="mailto:finfetchannel@outlook.com" class="fa fa-envelope fa-2x"></a>
-      <a href="https://discord.com/invite/ZQmnZc4ARa" class="fab fa-discord fa-2x"></a>
+      <a href="https://www.youtube.com/@FinFET" target="_blank">
+        <img src="finfet.png" height="200" />
+      </a>
+      <p>A channel on YouTube where I try stuff out with programming (especially Python) and tech in general.</p>
+      <a href="https://www.reddit.com/r/FinFET/" target="_blank" class="fab fa-reddit fa-2x"></a>
+      <a href="https://finfetchannel.itch.io/" target="_blank" class="fab fa-itch-io fa-2x"></a>
+      <a href="https://www.youtube.com/@FinFET" target="_blank" class="fab fa-youtube fa-2x"></a>
+      <a href="https://github.com/FinFetChannel" target="_blank" class="fab fa-github fa-2x"></a>
+      <a href="mailto:finfetchannel@outlook.com" target="_blank" class="fa fa-envelope fa-2x"></a>
+      <a href="https://discord.com/invite/ZQmnZc4ARa" target="_blank" class="fab fa-discord fa-2x"></a>
     </header>
     <main>
       <aside></aside>
@@ -21,13 +23,16 @@
         <h2>2022/2023 - Super MaRayO Caster</h2>
         <p>A first-person perspective version of Super Mario Bros. using raycasting, made in Python with PyGame and PygBag.</p>
         <div class="videocontainer">
-          <iframe src="https://www.youtube.com/embed/NXhRi8UgzZk" class="video"></iframe>
+          <iframe src="https://www.youtube.com/embed/NXhRi8UgzZk" class="video" allowfullscreen=""></iframe>
         </div>
         <br />
-        <a href="https://itch.io/embed-upload/7339954" target="7339954">Click here to load the game</a>
-        <div class="gamecontainer">
-          <iframe src="about:blank" name="7339954" class="video"></iframe>
-        </div>
+        <details>
+          <summary>Click HERE to reveal the game iframe and <a href="https://itch.io/embed-upload/7339954" target="7339954">HERE to actually load the game</a></summary>
+          <div class="gamecontainer">
+            <iframe src="about:blank" name="7339954" class="video" allowfullscreen=""></iframe>
+          </div>
+        </details>
+        <br />
         <div class="itchcontainer">
           <iframe src="https://itch.io/embed/1789891?dark=true" class="video"></iframe>
         </div>
@@ -37,13 +42,16 @@
         <h2>2022 - The LockPickin'joyer</h2>
         <p>A game inspired by the LockPickingLawyer, made in Python with PyGame and PygBag.</p>
         <div class="videocontainer">
-          <iframe src="https://www.youtube.com/embed/p-QJxbZmP3c" class="video"></iframe>
+          <iframe src="https://www.youtube.com/embed/p-QJxbZmP3c" class="video" allowfullscreen=""></iframe>
         </div>
         <br />
-        <a href="https://itch.io/embed-upload/6464625" target="6464625">Click here to load the game</a>
-        <div class="gamecontainer">
-          <iframe src="about:blank" name="6464625" class="video"></iframe>
-        </div>
+        <details>
+          <summary>Click HERE to reveal the game iframe and <a href="https://itch.io/embed-upload/6464625" target="6464625">HERE to actually load the game</a></summary>
+          <div class="gamecontainer">
+            <iframe src="about:blank" name="6464625" class="video" allowfullscreen=""></iframe>
+          </div>
+        </details>
+        <br />
         <div class="itchcontainer">
           <iframe src="https://itch.io/embed/1474850?dark=true" class="video"></iframe>
         </div>
@@ -53,7 +61,7 @@
         <h2>2021/2022 - Dead And!</h2>
         <p>A raycasting game made in Python, now with textures and sprites.</p>
         <div class="videocontainer">
-          <iframe src="https://www.youtube.com/embed/FLc6vUwyTdM" class="video"></iframe>
+          <iframe src="https://www.youtube.com/embed/FLc6vUwyTdM" class="video" allowfullscreen=""></iframe>
         </div>
         <p>Themes developed include:<ul><li>Floorcasting</li><li>Raycasting with textures and fake shadows</li><li>Sprites</li><li>Enemies AI</li><li>Sounds</li><li>Simple GUI and menus</li><li>Level design</li></ul></p>
         <div class="itchcontainer">
@@ -67,7 +75,7 @@
                         but beware of enemies.  The final objective is to obtain the highest score, you 
                         lose points when you die and the difficulty increases with the score.</p>
         <div class="videocontainer">
-          <iframe src="https://www.youtube.com/embed/GNfGmNccGjE" class="video"></iframe>
+          <iframe src="https://www.youtube.com/embed/GNfGmNccGjE" class="video" allowfullscreen=""></iframe>
         </div>
         <p>This game uses a simple implementation of raytracing, where several rays are cast
                         for each pixel, this allows for real time shadows and reflections. Geometry is based on 
@@ -84,7 +92,7 @@
         <p>One of my first projects in Python, a simple raycasting game with matplotlib, drawing walls as
                             vertical lines on a grid system.</p>
         <div class="videocontainer">
-          <iframe src="https://www.youtube.com/embed/5xyeWBxmqzc" class="video"></iframe>
+          <iframe src="https://www.youtube.com/embed/5xyeWBxmqzc" class="video" allowfullscreen=""></iframe>
         </div>
         <br />
         <hr />
@@ -93,12 +101,12 @@
       <aside></aside>
     </main>
     <footer>
-      <a href="https://www.reddit.com/r/FinFET/" class="fab fa-reddit fa-2x"></a>
-      <a href="https://finfetchannel.itch.io/" class="fab fa-itch-io fa-2x"></a>
-      <a href="https://www.youtube.com/@FinFET" class="fab fa-youtube fa-2x"></a>
-      <a href="https://github.com/FinFetChannel" class="fab fa-github fa-2x"></a>
-      <a href="mailto:finfetchannel@outlook.com" class="fa fa-envelope fa-2x"></a>
-      <a href="https://discord.com/invite/ZQmnZc4ARa" class="fab fa-discord fa-2x"></a>
+      <a href="https://www.reddit.com/r/FinFET/" target="_blank" class="fab fa-reddit fa-2x"></a>
+      <a href="https://finfetchannel.itch.io/" target="_blank" class="fab fa-itch-io fa-2x"></a>
+      <a href="https://www.youtube.com/@FinFET" target="_blank" class="fab fa-youtube fa-2x"></a>
+      <a href="https://github.com/FinFetChannel" target="_blank" class="fab fa-github fa-2x"></a>
+      <a href="mailto:finfetchannel@outlook.com" target="_blank" class="fa fa-envelope fa-2x"></a>
+      <a href="https://discord.com/invite/ZQmnZc4ARa" target="_blank" class="fab fa-discord fa-2x"></a>
       <p>2023 FinFET Channel. All rights reserved.</p>
     </footer>
   </body>
