@@ -36,6 +36,7 @@ def main():
                     game_frame(tag, text, '7339954')
                     doc.stag('br')
                     itch_frame(tag, '1789891')
+                    repo(tag, text, 'Super-MaRayO-Caster')
                     end_post(doc)
 
                     ###############################################################################
@@ -47,6 +48,7 @@ def main():
                     game_frame(tag, text, '6464625')
                     doc.stag('br')
                     itch_frame(tag, '1474850')
+                    repo(tag, text, 'LockPickin-joyer')
                     end_post(doc)
 
                     ###############################################################################
@@ -60,31 +62,32 @@ def main():
                                          'Enemies AI', 'Sounds', 'Simple GUI and menus', 'Level design']:
                                 line('li',item)
                     itch_frame(tag, '1326223')
+                    repo(tag, text, 'RayCasting2021')
                     end_post(doc)
                     
                     ###############################################################################
                     with tag('h2'): text('2021 - Pytracing Maze - my first game release')
                     with tag('p'):
-                        text('''A simple 3D maze game, where you have to find the exit to pass to the next level, 
-                        but beware of enemies.  The final objective is to obtain the highest score, you 
-                        lose points when you die and the difficulty increases with the score.''')
+                        text('''Simple ray tracing game in Python, based on my ray casting project.
+                          As you may have guessed, things started to get a bit heavy for Python, 
+                          so i had to resort to the Numba library, improving performance by 100x.''')
                     video_frame(tag, 'GNfGmNccGjE')
                     with tag('p'):
                         text('''This game uses a simple implementation of raytracing, where several rays are cast
                         for each pixel, this allows for real time shadows and reflections. Geometry is based on 
                         math, with cubes and spheres on a grid system.''')
                     itch_frame(tag, '1126594')
-                    with tag('p'):
-                        text('''The game was made in Python with Pygame, for better performance the drawing is accelerated 
-                        with Numba, leading to 20 times gain in fps.''')
+                    repo(tag, text, 'PytracingMaze')
                     end_post(doc)
 
                     ###############################################################################
                     with tag('h2'): text('2020 - Simple Raycasting with Matplotlib')
                     with tag('p'):
-                        text('''One of my first projects in Python, a simple raycasting game with matplotlib, drawing walls as
-                            vertical lines on a grid system.''')    
+                        text('''Based on the Ray Casting technique, where the objects are drawn entirely out of vertical lines.
+                          The size and position of the lines is defined by the distance between the player and the object. 
+                          This is a very simple 3D maze game made from scratch in Python, using only three libraries: Numpy, Matplotlib,  Keyboard.''')    
                     video_frame(tag, '5xyeWBxmqzc')
+                    repo(tag, text, 'RayCastingPythonMaze')
                     end_post(doc)
 
                 with tag('aside'): pass
@@ -120,7 +123,10 @@ def game_frame(tag, text, game):
         with tag('div', klass='gamecontainer'):
             with tag('iframe', src='about:blank', name=game, klass='video', allowfullscreen=''):pass
 
-    
+def repo(tag, text, repository):
+    with tag('p'):
+        with tag('a', href='https://github.com/FinFetChannel/'+repository, target="_blank"):
+            text('GitHub Repository')
 
 def end_post(doc):
     doc.stag('br'); doc.stag('hr'); doc.stag('br')
