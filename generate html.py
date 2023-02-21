@@ -12,14 +12,9 @@ def main():
 
         with tag('body'):
             with tag('header'):
-                # doc.stag('img', src='finfet.png', klass='header_logo')
                 with tag('a', href='https://www.youtube.com/@FinFET', target="_blank"):
                     doc.stag('img', src='finfet.png', height=200)
                 with tag('p'):
-                    # finfet_logo(tag, text)
-                    # text(' is a ')
-                    # with tag('a', href='https://www.youtube.com/@FinFET', target="_blank"):
-                    #     text('channel on YouTube') 
                     text('A channel on YouTube where I try stuff out with programming (especially Python) and tech in general.')
                 social_media(tag)
             with tag('main'):
@@ -99,12 +94,6 @@ def main():
             
     with open("index.html", "w") as f:
         f.writelines(indent(doc.getvalue()))
-
-def finfet_logo(tag, text):
-    with tag('span', style='color: rgb(7, 97, 193)'):
-        text('Fin')
-    with tag('span', style='color: rgb(227, 52, 52)'):
-        text('FET')
 
 def video_frame(tag, video):
     with tag('div', klass='videocontainer'):

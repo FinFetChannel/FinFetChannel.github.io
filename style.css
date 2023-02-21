@@ -35,12 +35,11 @@ footer {
   min-height: 150px;
   text-align: center;
 }
-aside:nth-child(1) {
+
+aside {
   flex: 0 0 20%;
 }
-aside:nth-child(3) {
-  flex: 0 0 20%;
-}
+
 article {
   flex: 1 0 auto;
   max-width: 60%;
