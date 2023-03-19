@@ -23,6 +23,18 @@ def main():
                 with tag('article'):
 
                     ###############################################################################
+                    with tag('h2'): text("2023 - DerDieDas Auto")
+                    with tag('p'):
+                        text(''' A racing game for training the genders (and articles) of German substantives. Made in Python with PyGame and PygBag.''')
+                    video_frame(tag, 'Q3Gcv5q1fHY')
+                    doc.stag('br')
+                    game_frame(tag, text, '7544508')
+                    doc.stag('br')
+                    itch_frame(tag, '1948138')
+                    repo(tag, text, 'Super-MaRayO-Caster')
+                    end_post(doc)
+
+                    ###############################################################################
                     with tag('h2'): text("2022/2023 - Super MaRayO Caster")
                     with tag('p'):
                         text('''A first-person perspective version of Super Mario Bros. using raycasting, made in Python with PyGame and PygBag.''')
