@@ -69,11 +69,19 @@ article {
   height: 0;
   padding-bottom: 22.25%;
 }
-.gamecontainer {
+
+.gamecontainer5b4 {
   position: relative;
   width: 100%;
   height: 0;
   padding-bottom: 77.5%;
+  background-image: url("finfettile.png");
+}
+.gamecontainer16b9 {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 58.75%;
   background-image: url("finfettile.png");
 }
 

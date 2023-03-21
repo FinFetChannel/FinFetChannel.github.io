@@ -28,10 +28,10 @@ def main():
                         text(''' A racing game for training the genders (and articles) of German substantives. Made in Python with PyGame and PygBag.''')
                     video_frame(tag, 'Q3Gcv5q1fHY')
                     doc.stag('br')
-                    game_frame(tag, text, '7544508')
+                    game_frame(tag, text, '7562013', '16b9')
                     doc.stag('br')
                     itch_frame(tag, '1948138')
-                    repo(tag, text, 'Super-MaRayO-Caster')
+                    # repo(tag, text, '')
                     end_post(doc)
 
                     ###############################################################################
@@ -115,13 +115,13 @@ def itch_frame(tag, game):
     with tag('div', klass='itchcontainer'):
         with tag('iframe', src="https://itch.io/embed/"+game+"?dark=true", klass='video'):pass
 
-def game_frame(tag, text, game):
+def game_frame(tag, text, game, aspect_ratio='5b4'):
     with tag('details'):
         with tag('summary'):
             text('Click HERE to reveal the game iframe and ')
             with tag('a', href="https://itch.io/embed-upload/"+game, target=game):
                 text('HERE to actually load the game')
-        with tag('div', klass='gamecontainer'):
+        with tag('div', klass='gamecontainer'+aspect_ratio):
             with tag('iframe', src='about:blank', name=game, klass='video', allowfullscreen=''):pass
 
 def repo(tag, text, repository):
