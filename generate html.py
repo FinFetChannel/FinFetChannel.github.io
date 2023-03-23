@@ -25,10 +25,11 @@ def main():
                     ###############################################################################
                     with tag('h2'): text("2023 - DerDieDas Auto")
                     with tag('p'):
-                        text(''' A racing game for training the genders (and articles) of German substantives. Made in Python with PyGame and PygBag.''')
+                        text(''' A racing game for training the genders (and articles) of German substantives.
+                          Made in Python with PyGame and PygBag. Also Available for Android''')
                     video_frame(tag, 'Q3Gcv5q1fHY')
                     doc.stag('br')
-                    game_frame(tag, text, '7562503', '16b9')
+                    game_frame(tag, text, '7571029', '16b9')
                     doc.stag('br')
                     itch_frame(tag, '1948138')
                     # repo(tag, text, '')
