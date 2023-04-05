@@ -29,7 +29,7 @@ def main():
                           Made in Python with PyGame and PygBag. Also Available for Android''')
                     video_frame(tag, 'Q3Gcv5q1fHY')
                     doc.stag('br')
-                    game_frame(tag, text, '7571029', '16b9')
+                    game_frame(tag, text, '7653840', '16b9')
                     doc.stag('br')
                     itch_frame(tag, '1948138')
                     # repo(tag, text, '')
@@ -53,10 +53,10 @@ def main():
                         text('''A game inspired by the LockPickingLawyer, made in Python with PyGame and PygBag.''')
                     video_frame(tag, 'p-QJxbZmP3c')
                     doc.stag('br')
-                    game_frame(tag, text, '6464625')
+                    game_frame(tag, text, '7648137', '16b9')
                     doc.stag('br')
                     itch_frame(tag, '1474850')
-                    repo(tag, text, 'LockPickin-joyer')
+                    # repo(tag, text, 'LockPickin-joyer')
                     end_post(doc)
 
                     ###############################################################################
