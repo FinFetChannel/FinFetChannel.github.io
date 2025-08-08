@@ -1,0 +1,40 @@
+name: Deploy Site to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'posts/**'
+      - 'generate.py'
+      - 'style.css'
+      - 'images/**'
+      - '.github/workflows/deploy.yml'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install yattag pyyaml markdown
+
+      - name: Generate HTML
+        run: python generate.py
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: site
+          publish_branch: gh-pages
+          force_orphan: true

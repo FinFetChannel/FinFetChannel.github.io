@@ -1,106 +1,147 @@
+/* Base reset and font */
 * {
-  font-family: arial;
-  color:rgb(156, 199, 185);
-  margin: 5;
+  margin: 0;
   padding: 0;
-  border: 5;
   box-sizing: border-box;
 }
+
 body {
-  background-color: rgb(34, 31, 31);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #121212; /* near black */
+  color: #e0e0e0;
+  line-height: 1.6;
 }
-h1 {
-  color: rgb(96, 168, 197);
+
+/* Headings */
+h1, h2, h3 {
+  font-weight: 600;
+  color: #4db6ff; /* accent blue */
+  margin-bottom: 0.5em;
 }
+
 p {
-  color: rgb(125, 230, 202);
+  color: #d0d0d0;
+  margin-bottom: 1em;
 }
 
+/* Header */
 header {
-  min-height: 150px;
-  min-width: 500px;
+  background: linear-gradient(to right, #1a1a1a, #222);
+  border-bottom: 3px solid #992d2d; /* dark red accent */
   text-align: center;
-  background-color: rgb(44, 42, 56);
-  font-size: 1.2em;
+  padding: 20px;
 }
 
+header img {
+  max-height: 150px;
+}
+
+header p {
+  max-width: 700px;
+  margin: 10px auto 0 auto;
+  font-size: 1.1em;
+  color: #b0b0b0;
+}
+
+/* Main layout */
 main {
-  min-height: 500px;
   display: flex;
-  flex-flow: row wrap;
-  align-items: center;
+  justify-content: center; /* center everything */
+  align-items: flex-start;
+  min-height: 500px;
+  padding: 20px;
+  gap: 20px;
 }
 
-footer {
-  min-height: 150px;
-  text-align: center;
-}
-
-aside {
-  flex: 0 0 20%;
+.margin {
+  flex: 1 1 200px;   /* equal shrink/grow */
+  max-width: 20%;
 }
 
 article {
-  flex: 1 0 auto;
-  max-width: 60%;
+  flex: 0 1 1100px;
   min-width: 500px;
-  background-color: rgb(58, 51, 51);
-  border: 50px;
-  border-color: blue;
-  padding: 2%;
+  max-width: 1100px;
+  background-color: #1e1e1e;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+  border-left: 5px solid #4db6ff;
 }
-.videocontainer {
+
+/* Video containers */
+.videocontainer,
+.itchcontainer,
+.gamecontainer5b4,
+.gamecontainer16b9 {
   position: relative;
   width: 100%;
   height: 0;
-  padding-bottom: 56.25%;
+  margin: 20px 0;
 }
+
+.videocontainer { padding-bottom: 56.25%; }
+.itchcontainer { padding-bottom: 22.25%; }
+.gamecontainer5b4 { padding-bottom: 77.5%; background-image: url("images/finfettile.png"); }
+.gamecontainer16b9 { padding-bottom: 58.75%; background-image: url("images/finfettile.png"); }
+
 .video {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  margin: 0%;
-}
-.itchcontainer {
-  position: relative;
-  width: 100%;
-  height: 0;
-  padding-bottom: 22.25%;
 }
 
-.gamecontainer5b4 {
-  position: relative;
-  width: 100%;
-  height: 0;
-  padding-bottom: 77.5%;
-  background-image: url("finfettile.png");
-}
-.gamecontainer16b9 {
-  position: relative;
-  width: 100%;
-  height: 0;
-  padding-bottom: 58.75%;
-  background-image: url("finfettile.png");
-}
-
-summary::-webkit-details-marker {
-  display: none;
-}
-
-.fab, .fa{
-  padding: 20px;
-  font-size: 30px;
-  width: 50px;
-  text-align: center;
+/* Links */
+a {
+  color: #4db6ff;
   text-decoration: none;
 }
 
-.fab:hover, .fa:hover {
-  opacity: 0.7;
+a:hover {
+  color: #ff4d4d; /* hover red */
 }
 
-.header_logo {
-  width: 20%;
+/* Footer */
+footer {
+  background: linear-gradient(to right, #1a1a1a, #222);
+  border-top: 3px solid #992d2d;
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+footer p {
+  color: #888;
+}
+
+/* Social icons */
+.fab, .fa {
+  padding: 10px;
+  font-size: 28px;
+  width: 50px;
+  text-align: center;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.fab:hover, .fa:hover {
+  opacity: 0.8;
+  transform: scale(1.15);
+}
+
+/* Mobile adjustments */
+@media (max-width: 900px) {
+  main {
+    flex-direction: column;
+    padding: 10px;
+  }
+  .margin {
+    display: none;
+  }
+  article {
+    min-width: auto;
+    max-width: 100%;
+    padding: 20px;
+  }
 }
