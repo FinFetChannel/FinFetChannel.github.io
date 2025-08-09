@@ -71,6 +71,7 @@ def generate_site(posts):
                         if post.get('repo'):
                             repo(tag, text, post['repo'])
                         end_post(doc)
+                
                 with tag('aside'):
                     with tag('nav'):
                         with tag('ul'):
@@ -102,6 +103,16 @@ def generate_site(posts):
             }, { rootMargin: "200px" });
             lazyIframes.forEach(iframe => observer.observe(iframe));
             });
+            document.querySelectorAll('details[data-game-src]').forEach(details => {
+            details.addEventListener('toggle', () => {
+                if (details.open) {
+                const iframe = details.querySelector('iframe');
+                if (iframe.src === 'about:blank') {
+                    iframe.src = details.dataset.gameSrc;
+                }
+                }
+            });
+            });
             </script>
             """)
 
@@ -127,13 +138,15 @@ def itch_frame(tag, game):
             pass
 
 def game_frame(tag, text, game, aspect_ratio='5b4', source=""):
-    with tag('div', klass='gamecontainer' + aspect_ratio):
-        with tag('iframe',
-                 **{'data-src': source + game},
-                 loading='lazy',
-                 klass='video',
-                 allowfullscreen=''):
-            pass
+    with tag('details', **{'data-game-src': source + game}):
+        with tag('summary'):
+            text('Click to load and show the game')
+        with tag('div', klass='gamecontainer' + aspect_ratio):
+            with tag('iframe',
+                     src='about:blank',
+                     klass='video',
+                     allowfullscreen=''):
+                pass
 
 def repo(tag, text, repository):
     with tag('p'):
