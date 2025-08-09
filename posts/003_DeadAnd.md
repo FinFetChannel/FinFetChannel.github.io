@@ -3,7 +3,7 @@ order: 3
 title: "Dead And! - 2021/2022"
 video: "FLc6vUwyTdM"
 game_id: "11575197"
-aspect: "16b9"
+aspect: "5b4"
 source: "https://itch.io/embed-upload/"
 itch: "1326223"
 repo: "RayCasting2021"
