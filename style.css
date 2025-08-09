@@ -175,7 +175,7 @@ aside {
     border-right: 2px solid rgb(96, 168, 197);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     main {
         flex-direction: column; /* stack instead of side-by-side */
     }
@@ -194,4 +194,5 @@ aside {
         max-width: 100%;
     }
 }
+
 
