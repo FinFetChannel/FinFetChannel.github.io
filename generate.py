@@ -39,18 +39,24 @@ def generate_site(posts):
 
         with tag('body'):
             # HEADER
-            with tag('header'):
-                with tag('a', href='https://www.youtube.com/@FinFET', target="_blank"):
+            with tag('header'):pass
+            """with tag('a', href='https://www.youtube.com/@FinFET', target="_blank"):
                     doc.stag('img', src='images/finfet.png', height=200)
                 with tag('p'):
                     text("A channel on YouTube where I try stuff out with programming (especially Python) and tech in general.")
-                social_media(tag)
+                #social_media(tag)"""
 
             with tag('main'):
-                with tag('aside'): pass
+                with tag('aside'):
+                    with tag('a', href='https://www.youtube.com/@FinFET', target="_blank"):
+                        doc.stag('img', src='images/finfet.png', height=200)
+                    with tag('p'):
+                        text("A channel on YouTube where I try stuff out with programming (especially Python) and tech in general.")
+                    social_media(tag)
                 with tag('article'):
                     for post in posts:
-                        with tag('h2'): text(post['title'])
+                        with tag('h2', id=f"post-{post['order']}"):  
+                            text(post['title'])
                         doc.asis(post['description_html'])
                         if post.get('video'):
                             video_frame(tag, post['video'])
@@ -65,7 +71,13 @@ def generate_site(posts):
                         if post.get('repo'):
                             repo(tag, text, post['repo'])
                         end_post(doc)
-                with tag('aside'): pass
+                with tag('aside'):
+                    with tag('nav'):
+                        with tag('ul'):
+                            for post in posts:
+                                with tag('li'):
+                                    with tag('a', href=f"#post-{post['order']}"):
+                                        text(post['title'])
 
             with tag('footer'):
                 social_media(tag)
