@@ -2,9 +2,9 @@
 order: 6
 title: "DerDieDas Auto - 2023, updated 2025"
 video: "Q3Gcv5q1fHY"
-game_id: "Derdiedas_Auto"
+game_id: "13749569"
 aspect: "16b9"
-source: ""
+source: "https://itch.io/embed-upload/"
 itch: "1948138"
 repo: ""
 ---
