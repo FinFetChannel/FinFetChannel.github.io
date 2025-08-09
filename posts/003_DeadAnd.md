@@ -1,6 +1,6 @@
 ---
 order: 3
-title: "Dead And! - 2021/2022"
+title: "Dead And! - 2021/2022 updated 2025"
 video: "FLc6vUwyTdM"
 game_id: "11575197"
 aspect: "5b4"
