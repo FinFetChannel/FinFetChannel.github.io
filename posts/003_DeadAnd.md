@@ -9,14 +9,6 @@ itch: "1326223"
 repo: "RayCasting2021"
 ---
 
-A raycasting game made in Python, now with textures and sprites.
-Themes developed include:
--Floorcasting
--Raycasting with textures and fake shadows
--Sprites
--Enemies AI
--Sounds
--Simple GUI and menus
--Level design
+Dead And! is a first-person shooter using Python and Pygame, built from the ground up with a custom raycasting engine. The project was developed incrementally, with each stage documented through devlogs covering floorcasting, wall rendering, sprite animation, looking up/down, enemy AI, sound integration, and UI/menu systems. Features include dynamic environments, interactive enemies, immersive audio, and a playable FPS mode. Recently updated with a web version with **Pygbag**.
 
 ---
