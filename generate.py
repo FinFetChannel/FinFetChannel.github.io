@@ -72,32 +72,56 @@ def generate_site(posts):
                 with tag('p'):
                     from datetime import datetime
                     text(f'{datetime.now().year} FinFET Channel. All rights reserved.')
+            
+            # Lazy load script
+            doc.asis("""
+            <script>
+            document.addEventListener("DOMContentLoaded", function() {
+            const lazyIframes = document.querySelectorAll("iframe[data-src]");
+            const observer = new IntersectionObserver((entries, obs) => {
+                entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const iframe = entry.target;
+                    iframe.src = iframe.dataset.src;
+                    iframe.removeAttribute("data-src");
+                    obs.unobserve(iframe);
+                }
+                });
+            }, { rootMargin: "200px" });
+            lazyIframes.forEach(iframe => observer.observe(iframe));
+            });
+            </script>
+            """)
+
 
     return indent(doc.getvalue())
 
 # === Helper functions ===
 def video_frame(tag, video):
     with tag('div', klass='videocontainer'):
-        with tag('iframe', src=f'https://www.youtube.com/embed/{video}',
-                 klass='video', allowfullscreen=''):
+        with tag('iframe',
+                 **{'data-src': f'https://www.youtube.com/embed/{video}'},
+                 loading='lazy',
+                 klass='video',
+                 allowfullscreen=''):
             pass
 
 def itch_frame(tag, game):
     with tag('div', klass='itchcontainer'):
-        with tag('iframe', src=f"https://itch.io/embed/{game}?dark=true",
+        with tag('iframe',
+                 **{'data-src': f"https://itch.io/embed/{game}?dark=true"},
+                 loading='lazy',
                  klass='video'):
             pass
 
 def game_frame(tag, text, game, aspect_ratio='5b4', source=""):
-    with tag('details'):
-        with tag('summary'):
-            text('Click HERE to reveal the game iframe and ')
-            with tag('a', href=source+game, target=game):
-                text('HERE to actually load the game')
-        with tag('div', klass='gamecontainer'+aspect_ratio):
-            with tag('iframe', src='about:blank', name=game,
-                     klass='video', allowfullscreen=''):
-                pass
+    with tag('div', klass='gamecontainer' + aspect_ratio):
+        with tag('iframe',
+                 **{'data-src': source + game},
+                 loading='lazy',
+                 klass='video',
+                 allowfullscreen=''):
+            pass
 
 def repo(tag, text, repository):
     with tag('p'):
