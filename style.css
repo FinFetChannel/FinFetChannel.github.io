@@ -188,11 +188,13 @@ aside {
         border-right: none;
         border-top: 2px solid rgb(96, 168, 197);
         padding: 1em 0;
+        text-align: center;
     }
     article {
         order: 1;
         max-width: 100%;
     }
 }
+
 
 
