@@ -1,0 +1,208 @@
+/* Base reset and font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #121212; /* near black */
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+/* Headings */
+h1, h2, h3 {
+  font-weight: 600;
+  color: #4db6ff; /* accent blue */
+  margin-bottom: 0.5em;
+}
+
+p {
+  color: #d0d0d0;
+  margin-bottom: 1em;
+}
+
+/* Header */
+header {
+  background: linear-gradient(to right, #1a1a1a, #222);
+  border-bottom: 3px solid #992d2d; /* dark red accent */
+  text-align: center;
+  padding: 20px;
+}
+
+header img {
+  max-height: 150px;
+}
+
+header p {
+  max-width: 700px;
+  margin: 10px auto 0 auto;
+  font-size: 1.1em;
+  color: #b0b0b0;
+}
+
+/* Main layout */
+main {
+  display: flex;
+  justify-content: center; /* center everything */
+  align-items: flex-start;
+  min-height: 500px;
+  padding: 20px;
+  gap: 20px;
+}
+
+.margin {
+  flex: 1 1 200px;   /* equal shrink/grow */
+  max-width: 20%;
+}
+
+article {
+  flex: 0 1 1100px;
+  min-width: 500px;
+  max-width: 1100px;
+  background-color: #1e1e1e;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+  border-left: 5px solid #4db6ff;
+}
+
+/* Video containers */
+.videocontainer,
+.itchcontainer,
+.gamecontainer5b4,
+.gamecontainer16b9 {
+  position: relative;
+  width: 100%;
+  height: 0;
+  margin: 20px 0;
+}
+
+.videocontainer { padding-bottom: 56.25%; }
+.itchcontainer { padding-bottom: 22.25%; }
+.gamecontainer5b4 { padding-bottom: 77.5%; background-image: url("images/finfettile.png"); }
+.gamecontainer16b9 { padding-bottom: 58.75%; background-image: url("images/finfettile.png"); }
+
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Links */
+a {
+  color: #4db6ff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ff4d4d; /* hover red */
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(to right, #1a1a1a, #222);
+  border-top: 3px solid #992d2d;
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+footer p {
+  color: #888;
+}
+
+/* Social icons */
+.fab, .fa {
+  padding: 10px;
+  font-size: 28px;
+  width: 50px;
+  text-align: center;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.fab:hover, .fa:hover {
+  opacity: 0.8;
+  transform: scale(1.15);
+}
+
+/* Mobile adjustments */
+@media (max-width: 900px) {
+  main {
+    flex-direction: column;
+    padding: 10px;
+  }
+  .margin {
+    display: none;
+  }
+  article {
+    min-width: auto;
+    max-width: 100%;
+    padding: 20px;
+  }
+}
+
+aside nav ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+aside nav ul li {
+    margin: 0.5em 0;
+}
+
+aside nav ul li a {
+    text-decoration: none;
+    color: rgb(96, 168, 197);
+}
+
+aside nav ul li a:hover {
+    text-decoration: underline;
+}
+
+aside {
+    flex: 0 0 20%;
+    height: 100vh;     /* fill the screen height */
+    overflow-y: auto;      /* scroll only inside sidebar */
+    position: sticky;      /* stick in place while page scrolls */
+    top: 0;                /* start sticking from top */
+    background-color: rgb(44, 42, 56);
+    padding: 1em;
+    border-right: 2px solid rgb(96, 168, 197);
+}
+aside img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto; /* centers horizontally */
+}
+
+@media (max-width: 1000px) {
+    main {
+        flex-direction: column; /* stack instead of side-by-side */
+    }
+    aside {
+        order: 0; /* move sidebar below main article */
+        width: 100%;
+        max-height: none;
+        overflow-y: visible;
+        position: static; /* remove sticky on mobile */
+        border-right: none;
+        border-top: 2px solid rgb(96, 168, 197);
+        padding: 1em 0;
+        text-align: center;
+    }
+    article {
+        order: 1;
+        max-width: 100%;
+    }
+}
+
+
+
+
+
