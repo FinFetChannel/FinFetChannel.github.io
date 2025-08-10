@@ -178,6 +178,7 @@ aside img {
   max-width: 100%;
   height: auto;
   display: block;
+  margin: 0 auto; /* centers horizontally */
 }
 
 @media (max-width: 1000px) {
@@ -200,6 +201,7 @@ aside img {
         max-width: 100%;
     }
 }
+
 
 
 
